@@ -1,0 +1,244 @@
+.dot {
+	background: linear-gradient(180deg, #2C64E3 0%, #164FD0 100%);
+	box-shadow: 
+		0px 1px 1px rgba(0, 0, 0, 0.1), 
+		0px 2px 4px rgba(0, 0, 0, 0.1), 
+		inset 0px 1px 1px #68B2C9,
+		0px 0px 0px 0px rgba(22,79,208,0.1);
+	border-radius: 128px;
+	color: white;
+	display: inline-block;
+	text-align: center;
+	cursor: default;
+	font-weight: 800;
+	transition:
+		box-shadow 0.1s ease-out, 
+		transform 0.2s cubic-bezier(0.73, 2.62, 0.67, 0.51),
+		top 0.3s cubic-bezier(0.645, 0.045, 0.355, 1),
+		left 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+
+	&:hover, &.focused {
+		box-shadow: 
+			0px 1px 1px rgba(0, 0, 0, 0.1), 
+			0px 2px 4px rgba(0, 0, 0, 0.1), 
+			inset 0px 1px 1px #68B2C9,
+			0px 0px 0px 16px rgba(22,79,208,0.2);
+	}
+}
+
+.focus-widget {
+	max-width: 800px;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	gap: 32px;
+	padding: 40px;
+
+	@media (max-width: 800px) {padding: 16px;}
+
+	.image-container {
+		box-sizing: border-box;
+		border-radius: 8px;
+		margin: 0;
+		position: relative;
+
+		img {
+			box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15), 0px 8px 16px rgba(0, 0, 0, 0.15);
+			border-radius: 8px;
+			width: 100%;
+			display: block;
+
+			&.selection-1 {
+				box-shadow: none;
+				margin: 0;
+				position: absolute;
+				top: 0;
+				left: 0;
+				opacity: 1;
+				transition: 
+					opacity .1s ease-out;
+			}
+		}
+
+		.dot {
+			font-size: 16px;
+			width: 32px;
+			height: 32px;
+			line-height: 32px;
+			transform: scale(0.4);
+			color: transparent;
+			position: absolute;
+
+			&.one 	{top: 25%; left: 25%;}
+			&.two 	{top: 50%; left: 50%;}
+			&.three {top: 75%; left: 75%;}
+		}
+
+		/* following section is for comparative only */
+		
+		&.selection-2 {
+			img.selection-1 {opacity: 0;}
+
+			.dot {
+			 	&.one 	{top: 20%; left: 40%;}
+				&.two 	{top: 30%; left: 80%;}
+				&.three {top: 85%; left: 10%;}
+			}
+		}
+	}
+
+	&:hover {
+		.image-container {
+			.dot {
+				transform: scale(1.0);
+				color: white;
+			}
+		}
+	}
+}
+
+.legend-container {
+	max-width: 640px;
+	margin: 0 auto;
+	cursor: default;
+	text-align: left;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	padding: 0px;
+	gap: 16px;
+
+	.legend {
+		display: flex;
+		flex-direction: row;
+		align-items: flex-start;
+		flex-basis: 24px 0;
+		padding: 0px;
+		gap: 16px;
+		transition: 
+			transform 0.1s ease-in-out;
+
+		.dot {
+			font-size: 12px;
+			line-height: 24px;
+			flex: 0 0 24px;
+		}
+
+		&.focused {
+			transform: scale(1.01);
+
+			.dot {
+				box-shadow: 
+					0px 1px 1px rgba(0, 0, 0, 0.1), 
+					0px 2px 4px rgba(0, 0, 0, 0.1), 
+					inset 0px 1px 1px #68B2C9,
+					0px 0px 0px 4px rgba(22,79,208,0.2);
+			}
+		}
+	}
+}
+
+.toggle {
+	cursor: pointer;
+	background: linear-gradient(180deg, #2C64E3 0%, #164FD0 100%);
+	box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.1), 0px 2px 4px rgba(0, 0, 0, 0.1), inset 0px 1px 1px #68B2C9;
+	border-radius: 16px;
+	position: relative;
+	display: grid;
+	grid-auto-flow: column;
+	gap: 4px;
+	padding: 4px;
+	width: fit-content;
+	margin: 0 auto;
+
+	.option {
+		position: relative;
+		z-index: 20;
+
+		label {
+			text-align: center;
+			display: inline-block;
+			width: 144px;
+			padding: 4px 16px;
+			user-select: none;
+			color: rgba(255, 255, 255, 0.4); 
+			font-weight: 500;
+		}
+
+		input[type="radio"] {
+			appearance: none;
+			display: block;
+			position: absolute;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+			cursor: pointer;
+
+			&:checked+label{
+				color: @grey80; 
+				font-weight: 800;
+			}
+		}
+	}
+
+	input:focus {
+    	outline-offset: 8px;
+	}
+
+	&::after {
+		content: "";
+		position: absolute;
+	    width: 144px;
+	    height: 26px;
+	    background: #EDEFF2;
+	    border-radius: 12px;
+	    top: 4px;
+	    z-index: 10;
+	    transition: 
+	    	left 0.2s cubic-bezier(0.4, 1.26, 0.58, 1),
+	    	top 0.2s cubic-bezier(0.4, 1.26, 0.58, 1);
+	}
+
+	&.selection-1::after {
+		left: 4px;
+		top: 4px;
+	}
+
+	&.selection-2::after {
+		left: 152px;
+		top: 4px;
+	}
+
+	&.selection-3::after {
+		left: 300px;
+		top: 4px;
+	}
+
+	@media (max-width: 600px) {
+		grid-auto-flow: row;;
+
+		.option > label {padding: 8px 16px;}
+		&::after {height: 34px;}
+
+		&.selection-1::after {
+			left: 4px;
+			top: 4px;
+		}
+
+		&.selection-2::after {
+			left: 4px;
+			top: 42px;
+		}
+
+		&.selection-3::after {
+			left: 4px;
+			top: 81px;
+		}
+	}
+}
+
+.image-container > .dot.order-1 {transition-delay: 0ms, 0ms, 0ms, 0ms;}
+.image-container > .dot.order-2 {transition-delay: 0ms, 50ms, 100ms, 100ms;}
+.image-container > .dot.order-3 {transition-delay: 0ms, 100ms, 200ms, 200ms;}
+
