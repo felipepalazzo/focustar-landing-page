@@ -1,3 +1,8 @@
+import Widget from "react-focustar";
+
+import img1 from "../assets/hero/desk.png";
+import img2 from "../assets/hero/desk.png";
+
 export default function Features() {
   return (
     <section className="features">
@@ -56,6 +61,29 @@ export default function Features() {
             Easily compare images, all while keeping the easy to use focus
             points.
           </p>
+
+          <Widget
+          images={{
+            old: img1,
+            new: img2,
+          }}
+          dots={{
+            old: [
+              { x: 10, y: 10 },
+              { x: 100, y: 90 },
+              { x: 400, y: 390 },
+            ],
+            new: [
+              { x: 150, y: 50 },
+              { x: 200, y: 80 },
+            ],
+          }}
+          legend={[
+            "Highlight relevant details",
+            "Even between two different images",
+            "With our comparative component",
+          ]}
+        />
         </div>
       </div>
     </section>

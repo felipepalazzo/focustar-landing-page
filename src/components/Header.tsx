@@ -31,14 +31,14 @@ export default function Header() {
             ],
           }}
           legend={[
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
-            "Class aptent taciti sociosqu ad litora torquent",
-            "Integer ut sem nec sem fringilla suscipit eget viverra nunc",
+            "Highlight any detail",
+            "In any image",
+            "In under 2 minutes",
           ]}
         />
         <div className="buttons">
           <div className="cta secondary">Donate</div>
-          <div className="cta">Add to my website</div>
+          <a href="https://github.com/felipepalazzo/react-focustar" target="_blank" className="cta">Add to my website</a>
         </div>
         <p className="caption">
           Currently available as a React component.{" "}
