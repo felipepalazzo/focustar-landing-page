@@ -38,7 +38,7 @@ export default function Header() {
         />
         <div className="buttons">
           <div className="cta secondary">Donate</div>
-          <a href="https://github.com/felipepalazzo/react-focustar" target="_blank" className="cta">Add to my website</a>
+          <a href="https://github.com/felipepalazzo/react-focustar" target="_blank" className="cta"><span className="icon github">&nbsp;</span>Add to my website</a>
         </div>
         <p className="caption">
           Currently available as a React component.{" "}
