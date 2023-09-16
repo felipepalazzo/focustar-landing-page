@@ -9,7 +9,7 @@ export default function Header() {
       <nav>
         <div className="logo">
           <div className="icon logo"></div>
-          <h3>Focustar</h3>
+          <h3>Picnote</h3>
         </div>
       </nav>
 
@@ -37,12 +37,10 @@ export default function Header() {
           ]}
         />
         <div className="buttons">
-          <div className="cta secondary">Donate</div>
-          <a href="https://github.com/felipepalazzo/react-focustar" target="_blank" className="cta"><span className="icon github">&nbsp;</span>Add to my website</a>
+          <a href="https://github.com/felipepalazzo/react-focustar" target="_blank" className="cta">Add to my website</a>
         </div>
         <p className="caption">
-          Currently available as a React component.{" "}
-          <a href="#roadmap">More options coming soon</a>.
+          Coming soon to Wordpress with other platforms to follow soon.
         </p>
       </div>
 
