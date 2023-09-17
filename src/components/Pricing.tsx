@@ -35,7 +35,7 @@ export default function Features() {
                 <div className="icon feature-no">&nbsp;</div>
               </li>
               <li>
-                <a href="button secondary">Hello</a>
+                <a href="#TODO" class="cta buttons disabled secondary">Coming soon</a>
               </li>
             </ul>
 
@@ -57,7 +57,7 @@ export default function Features() {
                 <div className="icon feature-yes">&nbsp;</div>
               </li>
               <li>
-                <a href="button secondary">Hello</a>
+                <a href="#TODO" class="cta buttons disabled primary">Coming soon</a>
               </li>
             </ul>
           </div>

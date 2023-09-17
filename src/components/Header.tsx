@@ -37,10 +37,10 @@ export default function Header() {
           ]}
         />
         <div className="buttons">
-          <a href="https://github.com/felipepalazzo/react-focustar" target="_blank" className="cta">Add to my website</a>
+          <a href="https://github.com/felipepalazzo/react-focustar" target="_blank" className="cta disabled">Coming soon</a>
         </div>
         <p className="caption">
-          Coming soon to Wordpress with other platforms to follow soon.
+          Available for Wordpress, other platforms coming later.
         </p>
       </div>
 

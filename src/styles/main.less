@@ -142,6 +142,12 @@ p.caption {
   gap: 8px;
   align-items: center;
 
+  &.disabled {
+    opacity: .6;
+    pointer-events: none;
+    cursor: not-allowed;
+  }
+
   &.secondary {
     color: @primary;
     background: @gradient-secondary;
@@ -179,12 +185,12 @@ p.caption {
   width: 100%;
   max-width: @max-width;
   margin: 0 auto;
-  padding: 48px;
+  padding: 48px 48px 0 48px;
   position: relative;
   text-align: center;
 
-  @media (max-width: 1023px) {
-    padding: 24px;
+  @media (max-width: 800px) {
+    padding: 16px;
   }
 
   > .toggle {
@@ -250,7 +256,6 @@ header {
     flex-direction: column;
     align-items: center;
     gap: 16px;
-    padding: 48px;
     z-index: 2;
 
     .hero {
@@ -331,18 +336,8 @@ header {
   }
 }
 
-section.intermission {
-  .container {
-    padding: 48px;
-  }
-}
-
 section.features {
   position: relative;
-
-  .container {
-    padding: 0 48px 48px 48px;
-  }
 }
 
 footer {
@@ -369,7 +364,6 @@ footer {
 section.pricing {
 
   .container {
-    padding: 0 48px 48px 48px;
 
     .banner {
 
@@ -460,7 +454,16 @@ section.pricing {
               font-size: 12px;
               font-style: normal;
               font-weight: 400;
+              color: @grey80;
+            }
+
+            p:first-child {
               color: @grey60;
+            }
+
+            .cta {
+              width: 100%;
+              margin-top: 8px;
             }
           }
         }
@@ -506,11 +509,18 @@ ul {
   }
 }
 
-.features.roadmap {
-  li {
-    align-items: flex-start;
-    padding: 32px 32px 28px 32px;
+.roadmap {
+
+  .container {
+    padding-bottom: 48px;
+
+     li {
+      align-items: flex-start;
+      padding: 32px 32px 28px 32px;
+    }
   }
+
+
 }
 
 .banner {

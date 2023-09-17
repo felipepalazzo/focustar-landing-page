@@ -1,6 +1,6 @@
 export default function Features() {
   return (
-    <section className="features">
+    <section className="roadmap">
       <div className="container">
 
         <p>

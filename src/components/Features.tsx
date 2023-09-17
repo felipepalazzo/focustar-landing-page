@@ -25,7 +25,7 @@ export default function Features() {
               <b>Highlight the details</b>
             </p>
             <p className="caption">
-              Use our placeable dots and legends to highlight important details
+              Use our placeable markers and legends to highlight important details
               and give more context.
             </p>
           </li>
