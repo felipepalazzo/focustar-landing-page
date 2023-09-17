@@ -1,7 +1,7 @@
 import Widget from "react-focustar";
 
-import img1 from "../assets/hero/desk.png";
-import img2 from "../assets/hero/desk.png";
+import img1 from "../assets/hero/demo-before.png";
+import img2 from "../assets/hero/demo-after.png";
 
 export default function Features() {
   return (
@@ -58,8 +58,8 @@ export default function Features() {
             <b>Also available: compare images like never before</b>
           </p>
           <p className="caption">
-            Easily compare images, all while keeping the easy to use focus
-            points.
+            Easily compare images, all while keeping the easy to use
+            markers.
           </p>
 
           <Widget
@@ -69,14 +69,14 @@ export default function Features() {
           }}
           dots={{
             old: [
-              { x: "10%", y: "10%" },
-              { x: "50%", y: "50%" },
-              { x: "90%", y: "90%" },
+              { x: "20%", y: "41%" },
+              { x: "62%", y: "10%" },
+              { x: "83%", y: "58%" },
             ],
             new: [
-              { x: "10%", y: "90%" },
-              { x: "50%", y: "50%" },
-              { x: "90%", y: "10%" },
+              { x: "20%", y: "41%" },
+              { x: "49%", y: "81%" },
+              { x: "83%", y: "58%" },
             ],
           }}
           legend={[
