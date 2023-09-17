@@ -59,7 +59,7 @@ export default function Features() {
           </p>
           <p className="caption">
             Easily compare images, all while keeping the easy to use
-            markers.
+            markers
           </p>
 
           <Widget

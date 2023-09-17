@@ -13,7 +13,7 @@ export default function Features() {
             <b>Features and pricing</b>
           </p>
           <p className="caption">
-            Unlock all features with a one-time purchase.
+            Unlock all features with a one-time purchase
           </p>
 
           <div class="cards">

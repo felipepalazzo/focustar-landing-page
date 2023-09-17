@@ -41,7 +41,7 @@ export default function Header() {
           <a href="https://github.com/felipepalazzo/react-focustar" target="_blank" className="cta disabled">Coming soon</a>
         </div>
         <p className="caption">
-          Available for Wordpress, other platforms coming later.
+          Available for Wordpress, other platforms coming later
         </p>
       </div>
 

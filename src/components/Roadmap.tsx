@@ -7,7 +7,7 @@ export default function Features() {
           <b>Roadmap</b>
         </p>
         <p className="caption">
-          See what's coming next to Picnote.
+          See what's coming next to Picnote
         </p>
 
         <ul className="features roadmap">
